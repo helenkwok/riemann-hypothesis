@@ -106,6 +106,8 @@ abbrev Big (D : D7) : Type := ∀ (l : ℕ) [Fact l.Prime], (↥D.LL0 →+* Padi
 
 
 
+set_option genInjectivity false in
+set_option genSizeOfSpec false in
 structure RingSpec (D : D7) (cf : CharFrame D) (b0 b1 : Big D) (Sx : Finset (PlE D.host)) (T : TwR D.LL0 D.nd) where
   eTw : T.Tw ≃ HeightOneSpectrum (𝓞 ↥D.LL0)
   pl_emb : ∀ i, ((T.l i : ℕ) : 𝓞 ↥D.LL0) ∈ (eTw i).asIdeal ∧

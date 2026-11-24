@@ -50,6 +50,8 @@ variable {R : Ranks} {H : Host R} {what₂ : Rows.Data R} [NumberField what₂.L
 
 
 
+set_option genInjectivity false in
+set_option genSizeOfSpec false in
 structure TwR (LL0 : IntermediateField ℚ what₂.LL) (N : NData R H what₂) where
   cc : N.Om ≃+* N.Om
   cc_cm : IsCMConjOm H.E N.Om cc

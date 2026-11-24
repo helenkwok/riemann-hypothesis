@@ -134,6 +134,8 @@ open scoped CategoryTheory.Obj
 
 variable {R : Type} [CommRing R] [IsDomain R] (I : Ideal R)
 
+set_option genInjectivity false in
+set_option genSizeOfSpec false in
 structure UnifPre (D : DegData R I) (A : PolAV (Spec (CommRingCat.of (FractionRing R))))
     (G : Over (Spec (CommRingCat.of R))) [GrpObj G] [IsCommMonObj G] where
   smooth : Smooth G.hom

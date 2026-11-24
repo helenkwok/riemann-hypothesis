@@ -82,6 +82,8 @@ structure PlSide (D : D7) where
 
 
 
+set_option genInjectivity false in
+set_option genSizeOfSpec false in
 structure WDSide (D : D7) (T : GlobalTheory.RowTie.WDTie D.nd D.naut) where
   wdOf : ∀ (l : ℕ) [Fact l.Prime] (ι : Qbar l ≃+* ℂ) {a}, (G D.host.E D.nd.Om →* GL (Fin a) (Qbar l)) → ∀ w, D.naut.LP w
   wdOf_dim : ∀ (l : ℕ) [Fact l.Prime] (ι : Qbar l ≃+* ℂ) {a} (r : G D.host.E D.nd.Om →* GL (Fin a) (Qbar l)) w, D.naut.lpDim (wdOf l ι r w) = a

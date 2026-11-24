@@ -221,6 +221,8 @@ def TwNew.mt {D : D7} (N : TwNew D) (M : MtFam D) : MtFam N.toD7 := fun μ j h1 
 
 
 
+set_option genInjectivity false in
+set_option genSizeOfSpec false in
 structure SideB (D : D7) (cf : CharFrame D) (Rw : RowSide D) (low : Finset ℕ)
     (Pq : HeightOneSpectrum (𝓞 (maximalRealSubfield D.host.E)) → PlE D.host) (S : RatDat D.ntw)
     (hL : ∀ j, ℕ → PlE D.host → Module.End D.what₂.LL (S.WL j)) (eig : ℕ → D.what₂.FT → ℕ → PlE D.host → ↥D.LL0)
@@ -299,6 +301,8 @@ def castX (X : LocNd (lay0 D)) {j : ℕ} {w : D.what₂.places.Pl} {i : X.nd.Loc
 
 
 
+set_option genInjectivity false in
+set_option genSizeOfSpec false in
 structure NdSpec (Pl : PlSide D) (M : MtFam D) (C : NChoice D) (big : D.what₂.places.Pl → Finset ℂ) (X : LocNd (lay0 D))
     (T : LocTw X) where
   iq : ∀ i : X.nd.Loc, FractionRing (X.nd.O i) →+* Qbar (X.nd.l i)
@@ -372,6 +376,8 @@ structure NdSpec (Pl : PlSide D) (M : MtFam D) (C : NChoice D) (big : D.what₂.
 
 
 
+set_option genInjectivity false in
+set_option genSizeOfSpec false in
 structure AutSpec {cf : CharFrame D} {jE : D.host.E →+* Qb} (A : SideA D cf jE) (M : MtFam D)
     (tup : D.what₂.Tup → Fin D.R.m → HChar D.host.E) {X : LocNd (lay0 D)}
     (iq : ∀ i : X.nd.Loc, FractionRing (X.nd.O i) →+* Qbar (X.nd.l i)) (Y : LocAut X) (Cb : LocBC Y) where

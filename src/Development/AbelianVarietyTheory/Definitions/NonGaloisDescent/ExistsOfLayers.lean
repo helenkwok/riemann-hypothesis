@@ -93,6 +93,8 @@ attribute [instance] WGam.gamGrp
 variable {PD : PeriodData G Qp K₀ K B BdR} {LL O : Type} [Field LL] [Algebra Qp LL]
     [CommRing O] [Algebra O LL] [TopologicalSpace LL] {v : AddValuation LL (WithTop ℚ)} {n s : ℕ}
 
+set_option genInjectivity false in
+set_option genSizeOfSpec false in
 structure WSer (Γ : WGam PD LL O v n s) where
   φ₀ : PowerSeries O →ₐ[O] PowerSeries O
   q₀ : PowerSeries O
@@ -250,6 +252,8 @@ variable {Zl Ai : Type} [CommRing Zl] [CommRing Ai] [Algebra Zl O] [Algebra Zl A
 
 
 
+set_option genInjectivity false in
+set_option genSizeOfSpec false in
 structure WCmp (Mo : WN E zl) (ιdR : Ai →+* BdR) (p1 : Ai) (tS zS : BdR) where
   cmp : ∀ T : LocLat G Qp LL O, ↥(Mo.N T) →+ T.V ⊗[Qp] B
   cmp_smul : ∀ (T : LocLat G Qp LL O) (c : O) (x : ↥(Mo.N T)), cmp T (c • x) = algebraMap O LL c • cmp T x

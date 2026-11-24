@@ -46,6 +46,8 @@ namespace GlobalTheory.Mem
 
 open Formalism.BasicNotions NumberField IsDedekindDomain
 
+set_option genInjectivity false in
+set_option genSizeOfSpec false in
 structure RowsRest (B : Base) (C : Cols B) where
   muAt : B.places.Pl → C.Tup
   muAt_conj : ∀ w, muAt (B.places.conj w) = muAt w

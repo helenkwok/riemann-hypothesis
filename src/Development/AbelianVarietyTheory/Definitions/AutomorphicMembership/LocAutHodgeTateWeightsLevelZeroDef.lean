@@ -51,6 +51,8 @@ variable {R : Ranks} {H : Host R} {what₂ : Rows.Data R} [NumberField what₂.L
 
 
 
+set_option genInjectivity false in
+set_option genSizeOfSpec false in
 structure LocNd (L : NLay0 R H what₂ LL0) where
   Loc : Type
   l : Loc → ℕ
@@ -232,6 +234,8 @@ def LocTw.ntw {L : NLay0 R H what₂ LL0} {X : LocNd L} (T : LocTw X) : NTw R H 
 
 
 
+set_option genInjectivity false in
+set_option genSizeOfSpec false in
 structure LocAut {L : NLay0 R H what₂ LL0} (X : LocNd L) where
   iotaQ : ∀ i, FractionRing (X.nd.O i) →+* Qbar (X.nd.l i)
   iotaQC : ∀ i, Qbar (X.nd.l i) ≃+* ℂ
